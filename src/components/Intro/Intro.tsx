@@ -1,12 +1,17 @@
 import * as SC from "./IntroStyled";
 
 import heroPicMob from "../../assets/images/image-web-3-mobile.jpg";
+import heroPicDesk from "../../assets/images/image-web-3-desktop.jpg"
+import { useScreenSize } from "@/hooks/useScreenSize";
 
 const Intro: React.FC = () => {
+
+    const {isDesktop} = useScreenSize()
+
   return (
     <SC.IntroCon>
       <SC.IntroPicThumb>
-        <img src={heroPicMob} alt="hero" />
+        <img src={isDesktop ? heroPicDesk : heroPicMob} alt="hero" />
       </SC.IntroPicThumb>
       <SC.IntroContentCon>
         <h3>The Bright Future of Web 3.0?</h3>

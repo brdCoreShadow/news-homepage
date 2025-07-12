@@ -13,12 +13,11 @@ export const BurgerWrapper = styled.div`
 
   text-align: right;
 
-  background-color: rgba(0, 0, 26, 0.5)
-;
+  background-color: rgba(0, 0, 26, 0.5);
 `;
 
 export const BurgerMenuCon = styled.div`
-display: inline-block;
+  display: inline-block;
 
   width: 68%;
   height: 100%;
@@ -27,7 +26,7 @@ display: inline-block;
   padding-left: 24px;
   padding-right: 28px;
 
-  background-color: #FFFDFA;
+  background-color: #fffdfa;
 `;
 
 export const BurgerBtnCon = styled.div`
@@ -46,11 +45,23 @@ export const BurgerBtnCon = styled.div`
 
 export const BurgerList = styled.ul`
   text-align: left;
+
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const BurgerItem = styled.li`
   &:not(:last-of-type) {
     margin-bottom: 24px;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 0;
+      margin-right: 40px;
+    }
   }
 
   & > a {
@@ -58,5 +69,22 @@ export const BurgerItem = styled.li`
     line-height: 1.3;
 
     color: #00001a;
+
+    @media (min-width: 1280px) {
+      font-size: 15px;
+      line-height: 1.7;
+
+      color: #5e607a;
+
+      transition: color 0.3s;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #f15d51;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+    }
   }
 `;

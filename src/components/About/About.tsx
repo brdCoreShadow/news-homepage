@@ -7,7 +7,7 @@ import gamingPic from "../../assets/images/image-gaming-growth.jpg";
 const About: React.FC = () => {
   return (
     <SC.AboutCon>
-      <ul>
+      <SC.AboutList>
         <SC.AboutItem>
           <SC.AboutItemPicThumb>
             <img src={retroPc} alt="retroPc" />
@@ -39,7 +39,7 @@ const About: React.FC = () => {
             <p>How the pandemic has sparked fresh opportunities.</p>
           </SC.AboutItemContentCon>
         </SC.AboutItem>
-      </ul>
+      </SC.AboutList>
     </SC.AboutCon>
   );
 };

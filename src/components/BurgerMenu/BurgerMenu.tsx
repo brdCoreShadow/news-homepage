@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import * as SC from "./BurgerMenuStyled"
 import { ToggleProps } from "@/utils/types";
+import BurgerList from "./BurgerList";
 
 const BurgerMenu: React.FC<Partial<ToggleProps>> = ({isShare, closeShare}) => {
 
@@ -23,23 +24,7 @@ if (isShare){
         <SC.BurgerBtnCon>
           <button type="button" onClick={closeShare}></button>
         </SC.BurgerBtnCon>
-        <SC.BurgerList>
-          <SC.BurgerItem>
-            <a href="#">Home</a>
-          </SC.BurgerItem>
-          <SC.BurgerItem>
-            <a href="#">New</a>
-          </SC.BurgerItem>
-          <SC.BurgerItem>
-            <a href="#">Popular</a>
-          </SC.BurgerItem>
-          <SC.BurgerItem>
-            <a href="#">Trending</a>
-          </SC.BurgerItem>
-          <SC.BurgerItem>
-            <a href="#">Categories</a>
-          </SC.BurgerItem>
-        </SC.BurgerList>
+        <BurgerList/>
       </SC.BurgerMenuCon>
     </SC.BurgerWrapper>
   );
