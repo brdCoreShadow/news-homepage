@@ -1,4 +1,5 @@
 import * as SC from "./AppStyled";
+import About from "./components/About/About";
 
 import BurgerBtn from "./components/BurgerBtn/BurgerBtn";
 import Intro from "./components/Intro/Intro";
@@ -17,6 +18,7 @@ function App() {
       <SharedLayout>
         <Intro/>
         <Trending/>
+        <About/>
       </SharedLayout>
     </SC.AppStyled>
   );

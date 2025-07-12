@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 
 export const TrendingCon = styled.div`
+margin-bottom: 64px;
+
 padding-top: 24px;
 padding-bottom: 24px;
 padding-left: 20px;
